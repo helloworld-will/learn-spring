@@ -1,0 +1,14 @@
+server:
+  port: 8081
+
+spring:
+  rabbitmq:
+    addresses: 127.0.0.1
+    username: guest
+    password: guest
+    connection-timeout: 10000
+    virtual-host: /
+    template:
+      exchange: exchangeOne
+      routing-key: routingKeyOne
+      default-receive-queue: queueOne
