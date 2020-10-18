@@ -61,12 +61,12 @@ public class RabbitReceiveService {
             bindings = {
                     @QueueBinding(
                             value = @Queue("topic-one"),
-                            key = "top-aa",
+                            key = "aa",
                             exchange = @Exchange(name = "topicExchange", type = "topic"))
             }
     )
     public void topicReceiveOne(String message) {
-        System.out.println("topicReceiveOne 异步监听 top-aa 交换机，接收的消息：" + message);
+        System.out.println("topicReceiveOne 异步监听 aa 交换机，接收的消息：" + message);
     }
 
 
@@ -74,24 +74,24 @@ public class RabbitReceiveService {
             bindings = {
                     @QueueBinding(
                             value = @Queue("topic-two"),
-                            key = "top-aa.*",
+                            key = "aa.*",
                             exchange = @Exchange(name = "topicExchange", type = "topic"))
             }
     )
     public void topicReceiveTwo(String message) {
-        System.out.println("topicReceiveTwo 异步监听top-aa.*交换机，接收的消息：" + message);
+        System.out.println("topicReceiveTwo 异步监听 aa.*交换机，接收的消息：" + message);
     }
 
     @RabbitListener(
             bindings = {
                     @QueueBinding(
                             value = @Queue("topic-three"),
-                            key = "top-aa.#",
+                            key = "aa.#",
                             exchange = @Exchange(name = "topicExchange", type = "topic"))
             }
     )
     public void topicReceiveThree(String message) {
-        System.out.println("topicReceiveThree 异步监听top-aa.#交换机，接收的消息：" + message);
+        System.out.println("topicReceiveThree 异步监听aa.#交换机，接收的消息：" + message);
     }
 
 }

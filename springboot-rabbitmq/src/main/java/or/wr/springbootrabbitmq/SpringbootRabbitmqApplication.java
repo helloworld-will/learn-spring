@@ -21,14 +21,14 @@ public class SpringbootRabbitmqApplication {
         rabbitSendService.sendMessageByFanout("spring-boot 整合 rabbitMQ，使用fanout" + LocalDateTime.now().toString());
 */
 
-        rabbitSendService.sendMessageByTopic("spring-boot整合rabbitMQ，使用 top-aa "
-                + LocalDateTime.now().toString(), "top-aa");
+        rabbitSendService.sendMessageByTopic("spring-boot整合rabbitMQ，使用 aa "
+                + LocalDateTime.now().toString(), "aa");
 
-        rabbitSendService.sendMessageByTopic("spring-boot整合rabbitMQ，使用 top-aa.bb "
-                + LocalDateTime.now().toString(), "top-aa.bb");
+        rabbitSendService.sendMessageByTopic("spring-boot整合rabbitMQ，使用 aa.bb "
+                + LocalDateTime.now().toString(), "aa.bb");
 
-        rabbitSendService.sendMessageByTopic("spring-boot整合rabbitMQ，使用 top-aa.bb.cc "
-                + LocalDateTime.now().toString(), "top-aa.bb.cc");
+        rabbitSendService.sendMessageByTopic("spring-boot整合rabbitMQ，使用 aa.bb.cc "
+                + LocalDateTime.now().toString(), "aa.bb.cc");
 
     }
 
