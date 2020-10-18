@@ -15,13 +15,13 @@ public class TestController {
     private RabbitTemplate rabbitTemplate;
 
     @RequestMapping("sendTest")
-    public String sendTest(){
+    public String sendTest(String message){
         String ms = LocalDate.now().toString()+ " "+ LocalTime.now().toString();
         System.out.println(ms);
         rabbitTemplate.convertAndSend(rabbitTemplate.getExchange(), rabbitTemplate.getRoutingKey(),
                 ms);
-        System.out.println(ms);
-        return ms;
+        System.out.println(message + ms);
+        return message + ms;
     }
 
     @RequestMapping("test")

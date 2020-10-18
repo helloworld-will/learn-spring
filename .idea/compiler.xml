@@ -7,12 +7,19 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring-rabbitmq-consumer" />
+        <module name="springboot-rabbitmq-consumer" />
+        <module name="springboot-rabbitmq" />
         <module name="spring-rabbitmq-producer-two" />
+        <module name="spring-temporary" />
+        <module name="test-temporary" />
         <module name="spring-rabbitmq" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="spring-rabbitmq-producer" target="8" />
-    </bytecodeTargetLevel>
+    <bytecodeTargetLevel target="8" />
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="springboot-rabbitmq" options="" />
+    </option>
   </component>
 </project>
